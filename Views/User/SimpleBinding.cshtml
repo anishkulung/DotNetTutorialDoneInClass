@@ -1,0 +1,19 @@
+﻿@model WebApplicationCandy.Models.WebUser 
+@{
+    ViewData["Title"] = "SimpleBinding";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>SimpleBinding</h1>
+@using (var form = Html.BeginForm()) {
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+    </div>
+    <input type="submit" value="Submit"/>
+} 
